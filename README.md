@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `virtualbox_version` [default: `5.0`]: Version to install
+* `virtualbox_version` [default: `5.0`, `4.3` for `Ubuntu 10.04`]: Version to install
 * `virtualbox_install`: [default: `[]`]: Additional packages to install (e.g. `dkms`)
 
 ## Dependencies
