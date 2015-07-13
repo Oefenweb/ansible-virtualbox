@@ -1,0 +1,16 @@
+# tasks file for virtualbox
+---
+- name: add public key
+  apt_key:
+    id: 98AB5139
+    url: https://www.virtualbox.org/download/oracle_vbox.asc
+    state: present
+  tags: [configuration, virtualbox, virtualbox-public-key]
+
+- name: add virtualbox repository
+  apt_repository:
+    repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
+    state: present
+    update_cache: yes
+  with_items: virtualbox_repositories
+  tags: [configuration, virtualbox, virtualbox-repository]

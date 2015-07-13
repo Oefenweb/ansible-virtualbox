@@ -1,0 +1,15 @@
+# tasks file for virtualbox
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: virtualbox_dependencies
+  tags: [configuration, virtualbox, virtualbox-dependencies]
+
+- name: install
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: virtualbox_install
+  tags: [configuration, virtualbox, virtualbox-install]

@@ -1,0 +1,8 @@
+# vars file for virtualbox
+---
+virtualbox_repositories:
+  - type: deb
+    url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_lsb.codename }}"
+    component: contrib
+virtualbox_dependencies:
+  - "virtualbox-{{ virtualbox_version }}"
