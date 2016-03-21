@@ -12,5 +12,5 @@
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
     update_cache: true
-  with_items: virtualbox_repositories
+  with_items: "{{virtualbox_repositories}}"
   tags: [configuration, virtualbox, virtualbox-repository]
