@@ -4,12 +4,14 @@
   apt:
     name: "{{ item }}"
     state: latest
-  with_items: virtualbox_dependencies
-  tags: [configuration, virtualbox, virtualbox-dependencies]
+  with_items: "{{ virtualbox_dependencies }}"
+  tags:
+    - virtualbox-install-dependencies
 
 - name: install
   apt:
     name: "{{ item }}"
     state: latest
-  with_items: virtualbox_install
-  tags: [configuration, virtualbox, virtualbox-install]
+  with_items: "{{ virtualbox_install }}"
+  tags:
+    - virtualbox-install-additional

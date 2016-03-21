@@ -9,12 +9,10 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - lucid
         - precise
         - trusty
     - name: Debian
       versions:
-        - squeeze
         - wheezy
         - jessie
   galaxy_tags:

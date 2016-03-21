@@ -1,4 +1,13 @@
 # tasks file for virtualbox
 ---
 - include: repository.yml
+  tags:
+    - configuration
+    - virtualbox
+    - virtualbox-repository
+
 - include: install.yml
+  tags:
+    - configuration
+    - virtualbox
+    - virtualbox-install
