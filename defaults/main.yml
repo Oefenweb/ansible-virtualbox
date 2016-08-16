@@ -1,4 +1,4 @@
 # defaults file for virtualbox
 ---
-virtualbox_version: "{{ '4.3' if ansible_distribution == 'Ubuntu' and ansible_distribution_version | version_compare('10.04', '=') else '5.0' }}"
+virtualbox_version: 5.1
 virtualbox_install: []
