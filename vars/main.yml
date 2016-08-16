@@ -4,5 +4,11 @@ virtualbox_repositories:
   - type: deb
     url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_lsb.codename }}"
     component: contrib
+virtualbox_public_keys:
+  - id: 54422A4B98AB5139
+    url: https://www.virtualbox.org/download/oracle_vbox.asc
+  - id: A2F683C52980AECF
+    url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+
 virtualbox_dependencies:
   - "virtualbox-{{ virtualbox_version }}"
