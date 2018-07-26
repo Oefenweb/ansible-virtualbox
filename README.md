@@ -1,6 +1,6 @@
 ## virtualbox
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-virtualbox.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-virtualbox) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-virtualbox-blue.svg)](https://galaxy.ansible.com/tersmitten/virtualbox/)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-virtualbox.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-virtualbox) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-virtualbox-blue.svg)](https://galaxy.ansible.com/Oefenweb/virtualbox/)
 
 Set up [VirtualBox](https://www.virtualbox.org/) in Debian-like systems.
 
