@@ -1,6 +1,7 @@
 # meta file for virtualbox
 ---
 galaxy_info:
+  role_name: virtualbox
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up VirtualBox in Debian-like systems
@@ -11,6 +12,7 @@ galaxy_info:
       versions:
         - trusty
         - xenial
+        - bionic
     - name: Debian
       versions:
         - wheezy

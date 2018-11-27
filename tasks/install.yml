@@ -2,16 +2,14 @@
 ---
 - name: install dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ virtualbox_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ virtualbox_dependencies }}"
   tags:
     - virtualbox-install-dependencies
 
 - name: install
   apt:
-    name: "{{ item }}"
+    name: "{{ virtualbox_install }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ virtualbox_install }}"
   tags:
     - virtualbox-install-additional
