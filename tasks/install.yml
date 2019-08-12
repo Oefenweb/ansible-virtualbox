@@ -1,15 +1,15 @@
 # tasks file for virtualbox
 ---
-- name: install dependencies
-  apt:
-    name: "{{ virtualbox_dependencies }}"
+- name: install virtualbox
+  package:
+    name: "{{ virtualbox_package }}"
     state: "{{ apt_install_state | default('latest') }}"
   tags:
     - virtualbox-install-dependencies
 
-- name: install
-  apt:
-    name: "{{ virtualbox_install }}"
+- name: install virtualbox additional packages
+  package:
+    name: "{{ virtualbox_additional_package_list }}"
     state: "{{ apt_install_state | default('latest') }}"
   tags:
     - virtualbox-install-additional

@@ -11,7 +11,7 @@ None
 #### Variables
 
 * `virtualbox_version` [default: `5.2`]: Version to install
-* `virtualbox_install`: [default: `[]`]: Additional packages to install (e.g. `dkms`)
+* `virtualbox_additional_package_list`: [default: `[]`]: Additional packages to install (e.g. `dkms`)
 
 ## Dependencies
 

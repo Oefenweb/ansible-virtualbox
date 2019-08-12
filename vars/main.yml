@@ -10,5 +10,5 @@ virtualbox_public_keys:
   - id: A2F683C52980AECF
     url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
 
-virtualbox_dependencies:
+virtualbox_package:
   - "virtualbox-{{ virtualbox_version }}"

@@ -1,4 +1,4 @@
 # defaults file for virtualbox
 ---
 virtualbox_version: 5.2
-virtualbox_install: []
+virtualbox_additional_package_list: []
