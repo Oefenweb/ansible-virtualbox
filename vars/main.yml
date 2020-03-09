@@ -1,7 +1,7 @@
 # vars file for virtualbox
 ---
 virtualbox_repositories:
-  - type: deb
+  - type: 'deb [arch=amd64]'
     url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_lsb.codename }}"
     component: contrib
 virtualbox_public_keys:
