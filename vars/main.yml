@@ -2,7 +2,7 @@
 ---
 virtualbox_repositories:
   - type: 'deb [arch=amd64]'
-    url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_lsb.codename }}"
+    url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
     component: contrib
 virtualbox_public_keys:
   - id: 54422A4B98AB5139
