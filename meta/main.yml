@@ -1,6 +1,7 @@
-# meta file for virtualbox
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: virtualbox
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

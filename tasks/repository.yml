@@ -1,4 +1,4 @@
-# tasks file for virtualbox
+# tasks file
 ---
 - name: add public key
   apt_key:

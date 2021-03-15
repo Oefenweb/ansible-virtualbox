@@ -1,4 +1,4 @@
-# vars file for virtualbox
+# vars file
 ---
 virtualbox_repositories:
   - type: 'deb [arch=amd64]'
