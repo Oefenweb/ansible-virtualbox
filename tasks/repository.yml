@@ -1,6 +1,16 @@
 # tasks file
 ---
-- name: add public key
+- name: repository | install | dependencies (pre)
+  apt:
+    name: "{{ virtualbox_dependencies_pre }}"
+    state: "{{ apt_install_state | default('latest') }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  tags:
+    - virtualbox-repository-install
+    - virtualbox-repository-install-dependencies
+
+- name: repository | add public key
   apt_key:
     id: "{{ item.id }}"
     url: "{{ item.url }}"
@@ -9,7 +19,7 @@
   tags:
     - virtualbox-repository-public-key
 
-- name: add virtualbox repository
+- name: repository | add repository
   apt_repository:
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
