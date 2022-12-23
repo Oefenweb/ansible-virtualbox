@@ -1,12 +1,14 @@
 # tasks file
 ---
-- include: repository.yml
+- name: repository
+  ansible.builtin.import_tasks: repository.yml
   tags:
     - configuration
     - virtualbox
     - virtualbox-repository
 
-- include: install.yml
+- name: install
+  ansible.builtin.import_tasks: install.yml
   tags:
     - configuration
     - virtualbox
