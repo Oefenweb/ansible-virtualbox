@@ -25,7 +25,7 @@ None
 ---
 - hosts: all
   roles:
-    - virtualbox
+    - oefenweb.virtualbox
 ```
 
 #### License
