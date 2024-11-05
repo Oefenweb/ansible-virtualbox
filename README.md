@@ -12,7 +12,7 @@ Set up [VirtualBox](https://www.virtualbox.org/) in Debian-like systems.
 
 #### Variables
 
-* `virtualbox_version` [default: `6.1`]: Version to install
+* `virtualbox_version` [default: `7.0`]: Version to install
 * `virtualbox_install`: [default: `[]`]: Additional packages to install (e.g. `dkms`)
 
 ## Dependencies
