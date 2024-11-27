@@ -9,6 +9,8 @@ Set up [VirtualBox](https://www.virtualbox.org/) in Debian-like systems.
 
 * `software-properties-common` (will be installed)
 * `dirmngr` (will be installed)
+* `apt-transport-https` (will be installed)
+* `wget` (will be installed)
 
 #### Variables
 
