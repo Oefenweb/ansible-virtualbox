@@ -1,19 +1,24 @@
 # vars file
 ---
+virtualbox_keyring_src: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+virtualbox_keyring_dst: /usr/share/keyrings/oracle-virtualbox-2016.gpg
 virtualbox_repositories:
+  - type: 'deb [arch=amd64 signed-by={{ virtualbox_keyring_dst }}]'
+    url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
+    component: contrib
+  - type: 'deb [arch=amd64]'
+    url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
+    component: contrib
   - type: 'deb [arch=amd64]'
     url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
     component: contrib
-virtualbox_public_keys:
-  - id: 54422A4B98AB5139
-    url: https://www.virtualbox.org/download/oracle_vbox.asc
-  - id: A2F683C52980AECF
-    url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
 
 virtualbox_dependencies_pre:
   - software-properties-common
   - dirmngr
-  - gpg-agent
+  - apt-transport-https
+  - wget
+  - coreutils
 
 virtualbox_dependencies:
   - "virtualbox-{{ virtualbox_version }}"
