@@ -9,9 +9,11 @@ virtualbox_repositories:
   - type: 'deb [arch=amd64]'
     url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
     component: contrib
+    state: absent
   - type: 'deb [arch=amd64]'
     url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
     component: contrib
+    state: absent
 
 virtualbox_dependencies_pre:
   - software-properties-common
