@@ -4,14 +4,14 @@ virtualbox_keyring_src: https://www.virtualbox.org/download/oracle_vbox_2016.asc
 virtualbox_keyring_dst: /usr/share/keyrings/oracle-virtualbox-2016.gpg
 virtualbox_repositories:
   - type: 'deb [arch=amd64 signed-by={{ virtualbox_keyring_dst }}]'
-    url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
+    url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_facts['distribution_release'] }}"
     component: contrib
   - type: 'deb [arch=amd64]'
-    url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
+    url: "https://download.virtualbox.org/virtualbox/debian {{ ansible_facts['distribution_release'] }}"
     component: contrib
     state: absent
   - type: 'deb [arch=amd64]'
-    url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }}"
+    url: "http://download.virtualbox.org/virtualbox/debian {{ ansible_facts['distribution_release'] }}"
     component: contrib
     state: absent
 
